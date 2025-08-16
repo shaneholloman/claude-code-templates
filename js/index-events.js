@@ -10,6 +10,8 @@ class IndexPageManager {
             agents: new Set(),
             commands: new Set(),
             mcps: new Set(),
+            settings: new Set(),
+            hooks: new Set(),
             templates: new Set()
         };
         
@@ -50,32 +52,84 @@ class IndexPageManager {
 
     async init() {
         try {
-            // Load both templates and components data
-            await Promise.all([
-                this.loadTemplatesData(),
-                this.loadComponentsData()
-            ]);
-            
+            // Setup event listeners first (they don't depend on data)
             this.setupEventListeners();
+            
+            // Show loading state
+            this.showLoadingState(true);
+            
+            // Load all components and templates at once
+            await this.loadComponentsData();
+            await this.loadTemplatesData();
+            
+            // Display components
             this.displayCurrentFilter();
+            
         } catch (error) {
             console.error('Error initializing index page:', error);
             this.showError('Failed to load data. Please refresh the page.');
+        } finally {
+            this.showLoadingState(false);
         }
     }
 
     async loadTemplatesData() {
         try {
+            // Templates are now loaded from components.json, not GitHub
             this.templatesData = await window.dataLoader.loadTemplates();
+            
+            // Update display if templates were found
+            if (this.templatesData && Object.keys(this.templatesData).length > 0) {
+                this.displayCurrentFilter();
+            }
         } catch (error) {
-            console.error('Error loading templates:', error);
-            // Continue without templates - show only components
+            console.warn('Templates not available in components.json:', error);
+            // Continue without templates - this is not critical
         }
     }
 
     async loadComponentsData() {
-        this.componentsData = await window.dataLoader.loadComponents();
-        this.collectAvailableCategories();
+        try {
+            // Load all components at once - the performance issue was mostly due to GitHub fetching
+            // Now that we only use components.json, we can load all data safely
+            this.componentsData = await window.dataLoader.loadAllComponents();
+            this.collectAvailableCategories();
+        } catch (error) {
+            console.error('Error loading components:', error);
+            // Use fallback data
+            this.componentsData = window.dataLoader.getFallbackComponentData();
+            this.collectAvailableCategories();
+        }
+    }
+    
+    // This method is no longer needed since we load all components at once
+    // Kept for backward compatibility but does nothing
+    async loadMoreComponentsInBackground() {
+        // No-op: All components are now loaded in the initial request
+        console.log('All components loaded in initial request - background loading not needed');
+    }
+    
+    // Check if data object is empty
+    isDataEmpty(data) {
+        return !data || ((!data.agents || data.agents.length === 0) &&
+                         (!data.commands || data.commands.length === 0) &&
+                         (!data.mcps || data.mcps.length === 0) &&
+                         (!data.settings || data.settings.length === 0) &&
+                         (!data.hooks || data.hooks.length === 0));
+    }
+    
+    // Show/hide loading state
+    showLoadingState(isLoading) {
+        const loadingElements = document.querySelectorAll('.loading-indicator, .loading-spinner');
+        const contentElements = document.querySelectorAll('#unifiedGrid, .filter-controls');
+        
+        loadingElements.forEach(el => {
+            el.style.display = isLoading ? 'flex' : 'none';
+        });
+        
+        contentElements.forEach(el => {
+            el.style.opacity = isLoading ? '0.7' : '1';
+        });
     }
 
     setupEventListeners() {
@@ -221,6 +275,8 @@ class IndexPageManager {
         this.availableCategories.agents.clear();
         this.availableCategories.commands.clear();
         this.availableCategories.mcps.clear();
+        this.availableCategories.settings.clear();
+        this.availableCategories.hooks.clear();
         this.availableCategories.templates.clear();
         
         // Collect categories from each component type
@@ -242,6 +298,20 @@ class IndexPageManager {
             this.componentsData.mcps.forEach(component => {
                 const category = component.category || 'general';
                 this.availableCategories.mcps.add(category);
+            });
+        }
+        
+        if (this.componentsData.settings && Array.isArray(this.componentsData.settings)) {
+            this.componentsData.settings.forEach(component => {
+                const category = component.category || 'general';
+                this.availableCategories.settings.add(category);
+            });
+        }
+        
+        if (this.componentsData.hooks && Array.isArray(this.componentsData.hooks)) {
+            this.componentsData.hooks.forEach(component => {
+                const category = component.category || 'general';
+                this.availableCategories.hooks.add(category);
             });
         }
         
@@ -278,6 +348,8 @@ class IndexPageManager {
             case 'agents':
             case 'commands':
             case 'mcps':
+            case 'settings':
+            case 'hooks':
                 this.displayComponents(grid, this.currentFilter);
                 break;
             default:
@@ -387,7 +459,9 @@ class IndexPageManager {
         const typeConfig = {
             agent: { icon: '🤖', color: '#ff6b6b' },
             command: { icon: '⚡', color: '#4ecdc4' },
-            mcp: { icon: '🔌', color: '#45b7d1' }
+            mcp: { icon: '🔌', color: '#45b7d1' },
+            setting: { icon: '⚙️', color: '#9c88ff' },
+            hook: { icon: '🪝', color: '#ff8c42' }
         };
         
         const config = typeConfig[component.type];
@@ -420,13 +494,27 @@ class IndexPageManager {
                     <div class="card-back">
                         <div class="command-display">
                             <h3>Installation Command</h3>
-                            <div class="command-code">${installCommand}</div>
-                            <div class="action-buttons">
+                            <div class="command-code-container">
+                                <div class="command-code">${installCommand}</div>
+                                <button class="copy-overlay-btn" onclick="copyToClipboard('${escapedCommand}'); event.stopPropagation();" title="Copy command">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                                    </svg>
+                                    Copy Command
+                                </button>
+                            </div>
+                            <div class="card-actions">
                                 <button class="view-files-btn" onclick="showComponentDetails('${escapedType}', '${escapedName}', '${escapedPath}', '${escapedCategory}')">
                                     📁 View Details
                                 </button>
-                                <button class="copy-command-btn" onclick="copyToClipboard('${escapedCommand}')">
-                                    📋 Copy Command
+                                <button class="add-to-cart-btn" 
+                                        data-type="${component.type}s" 
+                                        data-path="${componentPath}"
+                                        onclick="handleAddToCart('${escapedName}', '${componentPath}', '${component.type}s', '${escapedCategory}', this)">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19,7H18V6A2,2 0 0,0 16,4H8A2,2 0 0,0 6,6V7H5A1,1 0 0,0 4,8A1,1 0 0,0 5,9H6V19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V9H19A1,1 0 0,0 20,8A1,1 0 0,0 19,7M8,6H16V7H8V6M16,19H8V9H16V19Z"/>
+                                    </svg>
+                                    Add to Stack
                                 </button>
                             </div>
                         </div>
@@ -514,30 +602,35 @@ class IndexPageManager {
 
     // Update filter button counts
     updateFilterCounts() {
-        if (!this.componentsData) return;
+        // Get accurate total counts from data loader (includes full data counts)
+        const totalCounts = window.dataLoader.getTotalCounts();
+        if (!totalCounts) return;
         
-        const agentsCount = this.componentsData.agents ? this.componentsData.agents.length : 0;
-        const commandsCount = this.componentsData.commands ? this.componentsData.commands.length : 0;
-        const mcpsCount = this.componentsData.mcps ? this.componentsData.mcps.length : 0;
-        const templatesCount = this.componentsData.templates ? this.componentsData.templates.length : 0;
-        
-        // Update each filter button with count
+        // Update each filter button with accurate total count
         const agentsBtn = document.querySelector('[data-filter="agents"]');
         const commandsBtn = document.querySelector('[data-filter="commands"]');
         const mcpsBtn = document.querySelector('[data-filter="mcps"]');
+        const settingsBtn = document.querySelector('[data-filter="settings"]');
+        const hooksBtn = document.querySelector('[data-filter="hooks"]');
         const templatesBtn = document.querySelector('[data-filter="templates"]');
         
         if (agentsBtn) {
-            agentsBtn.innerHTML = `🤖 Agents (${agentsCount})`;
+            agentsBtn.innerHTML = `🤖 Agents (${totalCounts.agents})`;
         }
         if (commandsBtn) {
-            commandsBtn.innerHTML = `⚡ Commands (${commandsCount})`;
+            commandsBtn.innerHTML = `⚡ Commands (${totalCounts.commands})`;
         }
         if (mcpsBtn) {
-            mcpsBtn.innerHTML = `🔌 MCPs (${mcpsCount})`;
+            mcpsBtn.innerHTML = `🔌 MCPs (${totalCounts.mcps})`;
+        }
+        if (settingsBtn) {
+            settingsBtn.innerHTML = `⚙️ Settings (${totalCounts.settings})`;
+        }
+        if (hooksBtn) {
+            hooksBtn.innerHTML = `🪝 Hooks (${totalCounts.hooks})`;
         }
         if (templatesBtn) {
-            templatesBtn.innerHTML = `📦 Templates (${templatesCount})`;
+            templatesBtn.innerHTML = `📦 Templates (${totalCounts.templates})`;
         }
     }
 
@@ -561,6 +654,18 @@ class IndexPageManager {
                 name: 'MCP', 
                 description: 'Build a Model Context Protocol integration',
                 color: '#45b7d1'
+            },
+            settings: { 
+                icon: '⚙️', 
+                name: 'Setting', 
+                description: 'Configure Claude Code behavior',
+                color: '#9c88ff'
+            },
+            hooks: { 
+                icon: '🪝', 
+                name: 'Hook', 
+                description: 'Automate tool execution workflows',
+                color: '#ff8c42'
             }
         };
         
@@ -976,6 +1081,18 @@ function showComponentContributeModal(type) {
             example: 'redis-integration',
             structure: '- MCP server configuration\n- Connection parameters\n- Environment variables\n- Usage examples'
         },
+        settings: { 
+            name: 'Setting', 
+            description: 'Claude Code configuration setting',
+            example: 'custom-model-config',
+            structure: '- Setting description\n- Configuration options\n- Environment variables\n- Usage examples and best practices'
+        },
+        hooks: { 
+            name: 'Hook', 
+            description: 'Automation hook for tool execution',
+            example: 'format-on-save',
+            structure: '- Hook description and trigger\n- Command to execute\n- PreToolUse or PostToolUse configuration\n- Error handling and examples'
+        },
         templates: { 
             name: 'Template', 
             description: 'Project template with language or framework setup',
@@ -1181,7 +1298,7 @@ function showComponentContributeModal(type) {
                                         <pre>${config.structure}</pre>
                                     </div>
                                     <div class="step-command">
-                                        <strong>Example filename:</strong> <code>${config.example}.${type === 'mcps' ? 'json' : 'md'}</code>
+                                        <strong>Example filename:</strong> <code>${config.example}.${(type === 'mcps' || type === 'settings' || type === 'hooks') ? 'json' : 'md'}</code>
                                     </div>
                                 </div>
                             </div>
@@ -1217,8 +1334,8 @@ function showComponentContributeModal(type) {
                                     <h4>Submit Pull Request</h4>
                                     <p>Submit your contribution with proper documentation:</p>
                                     <div class="step-command">
-                                        <code>git add cli-tool/components/${type}/${config.example}.${type === 'mcps' ? 'json' : 'md'}</code>
-                                        <button class="copy-btn" onclick="copyToClipboard('git add cli-tool/components/${type}/${config.example}.${type === 'mcps' ? 'json' : 'md'}')">Copy</button>
+                                        <code>git add cli-tool/components/${type}/${config.example}.${(type === 'mcps' || type === 'settings' || type === 'hooks') ? 'json' : 'md'}</code>
+                                        <button class="copy-btn" onclick="copyToClipboard('git add cli-tool/components/${type}/${config.example}.${(type === 'mcps' || type === 'settings' || type === 'hooks') ? 'json' : 'md'}')">Copy</button>
                                     </div>
                                     <div class="step-command">
                                         <code>git commit -m "feat: Add ${config.example} ${config.name.toLowerCase()}"</code>
@@ -1284,6 +1401,44 @@ function closeComponentModal() {
 function goToPage(page) {
     if (window.indexManager) {
         window.indexManager.goToPage(page);
+    }
+}
+
+// Handle Add to Cart button click
+function handleAddToCart(name, path, type, category, buttonElement) {
+    // Prevent event propagation to avoid card flip
+    if (window.event) {
+        window.event.stopPropagation();
+    }
+    
+    const item = {
+        name: name,
+        path: path,
+        category: category,
+        description: `${name} - ${category}`
+    };
+    
+    // Add to cart using the cart manager
+    const success = addToCart(item, type);
+    
+    if (success) {
+        // Update button state
+        buttonElement.classList.add('added');
+        buttonElement.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
+            </svg>
+            Added to Stack
+        `;
+        
+        // Show a brief animation
+        buttonElement.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            buttonElement.style.transform = 'scale(1)';
+        }, 150);
+        
+        // Show notification (the cart manager already handles this, but we can add extra visual feedback)
+        console.log(`✅ ${name} added to stack successfully!`);
     }
 }
 
