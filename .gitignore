@@ -6,8 +6,9 @@
 .env*.local
 
 # Claude Code local settings (may contain API keys)
-.claude/settings.local.json
-.claude/hooks/
+**/settings.local.json
+.claude/hooks/*
+!.claude/hooks/telegram-pr-webhook.py
 .claude/commands/opsx/
 .claude/skills/
 
