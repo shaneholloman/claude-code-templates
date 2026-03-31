@@ -44,6 +44,8 @@ function SaveButton({ componentType, componentPath, componentName, componentCate
   const [collections, setCollections] = useState<Collection[]>([]);
   const [loading, setLoading] = useState(false);
   const [newName, setNewName] = useState('');
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [dropdownPos, setDropdownPos] = useState({ top: 0, left: 0 });
   const [creating, setCreating] = useState(false);
   const [savedIn, setSavedIn] = useState<Set<string>>(new Set());
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -82,6 +84,20 @@ function SaveButton({ componentType, componentPath, componentName, componentCate
       setLoading(false);
     }
   }
+
+  // Elevate the parent card's z-index when dropdown is open
+  useEffect(() => {
+    const card = dropdownRef.current?.closest('.group') as HTMLElement | null;
+    if (!card) return;
+    if (open) {
+      card.style.zIndex = '50';
+      card.style.position = 'relative';
+    } else {
+      card.style.zIndex = '';
+      card.style.position = '';
+    }
+    return () => { card.style.zIndex = ''; card.style.position = ''; };
+  }, [open]);
 
   async function handleToggle(e: React.MouseEvent) {
     e.stopPropagation();
@@ -188,8 +204,9 @@ function SaveButton({ componentType, componentPath, componentName, componentCate
   }
 
   return (
-    <div className={`relative ${open ? 'z-[100]' : ''}`} ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       <button
+        ref={buttonRef}
         onClick={handleToggle}
         className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 transition-all ${
           isSaved
@@ -204,7 +221,7 @@ function SaveButton({ componentType, componentPath, componentName, componentCate
       </button>
 
       {open && (
-        <div className="absolute right-0 top-full mt-1 w-56 bg-[var(--color-surface-1)] border border-[var(--color-border)] rounded-lg shadow-xl z-50 py-1">
+        <div className="absolute right-0 top-full mt-1 w-56 bg-[var(--color-surface-1)] border border-[var(--color-border)] rounded-lg shadow-xl z-[9999] py-1">
           {loading ? (
             <div className="px-3 py-4 text-center">
               <div className="w-4 h-4 border-2 border-[var(--color-text-tertiary)] border-t-transparent rounded-full animate-spin mx-auto" />
