@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-04-22T04:04:50.354460+00:00",
-  "totalJobs": 93,
+  "lastUpdated": "2026-04-30T04:17:06.963682+00:00",
+  "totalJobs": 87,
   "sources": [
     "Anthropic",
     "HackerNews",
@@ -9,22 +9,162 @@
   ],
   "jobs": [
     {
-      "id": "rok-remote-senior-technical-lead-calibrate-group-ai-1131230",
-      "company": "Calibrate Group AI",
-      "position": "Senior Technical Lead",
+      "id": "rok-remote-front-end-full-stack-developer-honor-foods-1131370",
+      "company": "Honor Foods",
+      "position": "Front End Full Stack Developer",
       "location": "Remote",
       "remote": true,
       "salary": "",
-      "description": "We're hiring our founding technical hire — a Senior Technical Lead who will own the entire technical vision and execution. This is a co-builder role, not a cog-in-machine role. What You'll Own: Designing and building custom AI implementations for SMB clients — from discovery through deployment...",
-      "applyUrl": "https://remoteOK.com/remote-jobs/remote-senior-technical-lead-calibrate-group-ai-1131230",
+      "description": "Front-End / Full Stack Developer (React + Java) ð Remote | Full-Time Want to build tech that actually moves a business? At Honor Foods, our developers power real-world logistics—systems that keep products flowing and customers happy. We're looking for a front-end focused developer who loves...",
+      "applyUrl": "https://remoteOK.com/remote-jobs/remote-front-end-full-stack-developer-honor-foods-1131370",
       "source": "RemoteOK",
-      "sourceUrl": "https://remoteok.com/remote-jobs/remote-senior-technical-lead-calibrate-group-ai-1131230",
-      "postedAt": "2026-04-20T18:38:56+00:00",
+      "sourceUrl": "https://remoteok.com/remote-jobs/remote-front-end-full-stack-developer-honor-foods-1131370",
+      "postedAt": "2026-04-29T00:00:19+00:00",
       "tags": [
-        "Kubernetes",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "PostgreSQL",
+        "Copilot",
+        "Rails"
+      ],
+      "companyIcon": ""
+    },
+    {
+      "id": "rok-remote-senior-product-marketing-manager-us-smile-digital-health-1131348",
+      "company": "Smile Digital Health",
+      "position": "Senior Product Marketing Manager US",
+      "location": "Remote",
+      "remote": true,
+      "salary": "",
+      "description": "Working for a company like Smile Digital Health means supporting our mandate for #BetterGlobalHealth . We strive towards this goal every day, and the results can be seen in the impact of our innovative health data platform and data management solutions, which are used in over 20 countries. We were...",
+      "applyUrl": "https://remoteOK.com/remote-jobs/remote-senior-product-marketing-manager-us-smile-digital-health-1131348",
+      "source": "RemoteOK",
+      "sourceUrl": "https://remoteok.com/remote-jobs/remote-senior-product-marketing-manager-us-smile-digital-health-1131348",
+      "postedAt": "2026-04-28T00:00:03+00:00",
+      "tags": [],
+      "companyIcon": ""
+    },
+    {
+      "id": "rok-remote-hq-ai-enablement-lead-everfield-1131322",
+      "company": "Everfield",
+      "position": "HQ AI Enablement Lead",
+      "location": "Remote",
+      "remote": true,
+      "salary": "",
+      "description": "About Everfield Everfield buys, builds, and grows European vertical market and specialist software companies, providing them with the tools they need to move to the next level. Our mission is to foster ambition, fuel growth, and unlock opportunities for Europe's software ecosystem. Companies in the...",
+      "applyUrl": "https://remoteOK.com/remote-jobs/remote-hq-ai-enablement-lead-everfield-1131322",
+      "source": "RemoteOK",
+      "sourceUrl": "https://remoteok.com/remote-jobs/remote-hq-ai-enablement-lead-everfield-1131322",
+      "postedAt": "2026-04-25T00:00:49+00:00",
+      "tags": [
+        "Rust",
+        "Go",
+        "Azure",
+        "Claude Code"
+      ],
+      "companyIcon": ""
+    },
+    {
+      "id": "anth-5197538008",
+      "company": "Anthropic",
+      "position": "Manager of Applied AI Architecture, Enterprise Tech (Cyber)",
+      "location": "New York City, NY; San Francisco, CA | New York City, NY; Seattle, WA",
+      "remote": false,
+      "salary": "",
+      "description": "As the manager of the Applied AI Architect, Enterprise Tech (Cyber) team at Anthropic, you will drive the adoption of frontier AI by enabling the deployment of Anthropic's products (Claude for Enterprise, Claude Code, and API) across Enterprise Tech companies and digital-first organizations. You'll...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5197538008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5197538008",
+      "postedAt": "2026-04-24T12:17:48-04:00",
+      "tags": [
+        "Rust",
+        "AWS",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
+    },
+    {
+      "id": "anth-5184077008",
+      "company": "Anthropic",
+      "position": "Head of ANZ, Applied AI",
+      "location": "Sydney, Australia",
+      "remote": false,
+      "salary": "",
+      "description": "As the founding leader of Applied AI Solutions Architecture in ANZ, you will drive the adoption of frontier AI by enabling the deployment of Anthropic's products (Claude for Enterprise, Claude Code, and API) across Australian and New Zealand enterprises and digital-first organizations. You'll...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5184077008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5184077008",
+      "postedAt": "2026-04-24T10:30:10-04:00",
+      "tags": [
+        "Rust",
+        "AWS",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
+    },
+    {
+      "id": "anth-5197597008",
+      "company": "Anthropic",
+      "position": "Technical Specialist, Claude Code",
+      "location": "San Francisco, CA",
+      "remote": false,
+      "salary": "",
+      "description": "Anthropic launches products at lightning speed and many of them grow at an unprecedented pace, too. For no product is this more true than Claude Code, the fastest-growing software product in history. That said, speed of adoption is not the same as depth of adoption. We’re building a team of...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5197597008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5197597008",
+      "postedAt": "2026-04-23T18:13:14-04:00",
+      "tags": [
+        "Rust",
+        "AWS",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
+    },
+    {
+      "id": "rok-remote-mid-senior-ai-video-artist-everai-1131288",
+      "company": "EverAI",
+      "position": "Mid Senior AI Video Artist",
+      "location": "Remote",
+      "remote": true,
+      "salary": "",
+      "description": "Our Vision & Products ð EverAI — Building the Future of AI Companionship One of the Top 15 Largest & Fastest-Growing AI Companies in the World 50 Million Users in 2 years — Help Us Reach 100M first, 500M next At EverAI , we’re shaping what it means to connect with AI. With 50 million users and...",
+      "applyUrl": "https://remoteOK.com/remote-jobs/remote-mid-senior-ai-video-artist-everai-1131288",
+      "source": "RemoteOK",
+      "sourceUrl": "https://remoteok.com/remote-jobs/remote-mid-senior-ai-video-artist-everai-1131288",
+      "postedAt": "2026-04-23T08:11:46+00:00",
+      "tags": [
+        "AWS",
+        "Claude Code",
         "Cursor"
       ],
       "companyIcon": ""
+    },
+    {
+      "id": "anth-5194007008",
+      "company": "Anthropic",
+      "position": "Applied AI Architect, Public Sector",
+      "location": "London, UK",
+      "remote": false,
+      "salary": "",
+      "description": "As an Applied AI team member at Anthropic, you will be a pre-sales architect focused on becoming a trusted technical advisor to the UK and Northern Europe public sector — with a primary focus on UK Central Government departments, executive agencies, and arm’s length bodies, and a reach extending...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5194007008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5194007008",
+      "postedAt": "2026-04-23T03:34:39-04:00",
+      "tags": [
+        "Python",
+        "Rust",
+        "AWS",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
       "id": "anth-5191433008",
@@ -55,7 +195,7 @@
     {
       "id": "anth-5192805008",
       "company": "Anthropic",
-      "position": "Solutions Architect, Applied AI (Commercial)",
+      "position": "Applied AI Architect, Commercial",
       "location": "San Francisco, CA | New York City, NY",
       "remote": false,
       "salary": "",
@@ -75,33 +215,13 @@
       "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
-      "id": "rok-remote-ai-transformation-lead-insider-one-1131194",
-      "company": "Insider One",
-      "position": "AI Transformation Lead",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Before jumping into all the information about the role and what you can bring to the table, let us introduce ourselves real quick. About us Insider One is the #1 platform that brings everything marketing and customer engagement teams need in one place so they can reach their peak potential and...",
-      "applyUrl": "https://remoteOK.com/remote-jobs/remote-ai-transformation-lead-insider-one-1131194",
-      "source": "RemoteOK",
-      "sourceUrl": "https://remoteok.com/remote-jobs/remote-ai-transformation-lead-insider-one-1131194",
-      "postedAt": "2026-04-17T16:00:04+00:00",
-      "tags": [
-        "Rust",
-        "Go",
-        "Cursor",
-        "Copilot"
-      ],
-      "companyIcon": ""
-    },
-    {
       "id": "anth-5192104008",
       "company": "Anthropic",
-      "position": "Global Leader, Applied AI Architects, Beneficial Deployments",
+      "position": "Global Applied AI Architecture Lead, Beneficial Deployments",
       "location": "San Francisco, CA | New York City, NY",
       "remote": false,
       "salary": "",
-      "description": "About Anthropic Anthropic’s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working...",
+      "description": "As the Global Leader of Applied AI Architects for Beneficial Deployments, you will lead the team of Applied AI Architects who serve as the primary technical partners to mission-driven organizations and non-profits adopting Claude. You'll build and scale a world-class, globally distributed team that...",
       "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5192104008",
       "source": "Anthropic",
       "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5192104008",
@@ -114,47 +234,6 @@
         "Anthropic"
       ],
       "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "rok-remote-senior-react-native-developer-headway-1131173",
-      "company": "Headway",
-      "position": "Senior React Native Developer",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "About Headway Founded in 2015, Headway was born out of a passion to bring entrepreneurial ideas to market and keep them there. We work holistically with our client partners as a true extension of their product team, not just as an execution arm of their business. If we see something broken, whether...",
-      "applyUrl": "https://remoteOK.com/remote-jobs/remote-senior-react-native-developer-headway-1131173",
-      "source": "RemoteOK",
-      "sourceUrl": "https://remoteok.com/remote-jobs/remote-senior-react-native-developer-headway-1131173",
-      "postedAt": "2026-04-16T18:16:22+00:00",
-      "tags": [
-        "React",
-        "JavaScript",
-        "Rust",
-        "Claude Code",
-        "React Native",
-        "Ruby",
-        "Rails"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "rok-remote-software-engineer-payment-operations-wingspan-1131116",
-      "company": "Wingspan",
-      "position": "Software Engineer Payment Operations",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Who We Are Wingspan is the first payroll platform designed specifically for independent contractors and their businesses. We simplify onboarding, payments, and compliance for flexible workforces of all sizes, from solo operators to large enterprises. We're a Series B startup based in NYC with...",
-      "applyUrl": "https://remoteOK.com/remote-jobs/remote-software-engineer-payment-operations-wingspan-1131116",
-      "source": "RemoteOK",
-      "sourceUrl": "https://remoteok.com/remote-jobs/remote-software-engineer-payment-operations-wingspan-1131116",
-      "postedAt": "2026-04-15T00:01:21+00:00",
-      "tags": [
-        "Node.js",
-        "Claude Code"
-      ],
-      "companyIcon": ""
     },
     {
       "id": "anth-5186669008",
@@ -186,7 +265,7 @@
       "id": "anth-5185501008",
       "company": "Anthropic",
       "position": "Technical Enablement Lead, Claude Code",
-      "location": "Boston, MA; San Francisco, CA | New York City, NY; Seattle, WA; Washington, DC",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA; Washington, DC",
       "remote": false,
       "salary": "",
       "description": "Anthropic is looking for a Technical Enablement Lead to curate & deliver the technical curriculum that lets our go-to-market teams, partner, and customers demonstrate and support Claude Code with confidence. You'll own Claude Code enablement—building demos, labs, and content that help sellers...",
@@ -283,29 +362,9 @@
       "companyIcon": ""
     },
     {
-      "id": "anth-5181763008",
-      "company": "Anthropic",
-      "position": "Manager, Customer Productivity",
-      "location": "San Francisco, CA | New York City, NY",
-      "remote": false,
-      "salary": "",
-      "description": "Anthropic is seeking an experienced professional to build and lead our customer productivity and training program. As a key member of the Go-to-Market team, you will be responsible for designing the frameworks, resources, and engagement motions that ensure our customers are successfully adopting...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5181763008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5181763008",
-      "postedAt": "2026-04-09T18:57:31-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
       "id": "anth-5174743008",
       "company": "Anthropic",
-      "position": "Software Engineer, Full-stack",
+      "position": "Senior Software Engineer, Full-stack",
       "location": "San Francisco, CA | New York City, NY | Seattle, WA",
       "remote": false,
       "salary": "",
@@ -369,7 +428,7 @@
     {
       "id": "anth-5157844008",
       "company": "Anthropic",
-      "position": "Software Engineer, Platform",
+      "position": "Senior Software Engineer, Platform",
       "location": "San Francisco, CA | New York City, NY | Seattle, WA",
       "remote": false,
       "salary": "",
@@ -618,26 +677,6 @@
       "companyIcon": ""
     },
     {
-      "id": "anth-5153580008",
-      "company": "Anthropic",
-      "position": "Head of Programmatic Outcomes — Product",
-      "location": "San Francisco, CA",
-      "remote": false,
-      "salary": "",
-      "description": "The Head of Programmatic Outcomes (Product) shapes the product-led growth strategy, in-product activation design, and adoption loops that reach every knowledge worker — not account by account, but at population scale — in deep partnership with Anthropic’s Product, Growth Marketing, and Strategy...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153580008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153580008",
-      "postedAt": "2026-04-01T18:58:12-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
       "id": "hn-47604920",
       "company": "Mixpeek",
       "position": "Senior Infrastructure Engineer",
@@ -681,7 +720,7 @@
     {
       "id": "anth-5173031008",
       "company": "Anthropic",
-      "position": "Manager, Applied AI Solutions Architecture - Partnerships",
+      "position": "Manager of Applied AI Architecture, Partnerships",
       "location": "San Francisco, CA | New York City, NY | Seattle, WA",
       "remote": false,
       "salary": "",
@@ -789,46 +828,6 @@
       "companyIcon": ""
     },
     {
-      "id": "wwr-contentjet-inc-automation-integration-engineer",
-      "company": "ContentJet Inc.",
-      "position": "Automation & Integration Engineer",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: Montreal, Canada URL: https://www.contentjet.com ABOUT CONTENTJET ContentJet is a Canadian UGC creative agency that connects brands with creators to produce high-performing user-generated content at scale. Our delivery engine runs entirely on AI automation and intelligent integration...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/contentjet-inc-automation-integration-engineer",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/contentjet-inc-automation-integration-engineer",
-      "postedAt": "2026-03-30T12:52:41+00:00",
-      "tags": [
-        "JavaScript",
-        "Python",
-        "PostgreSQL",
-        "Docker",
-        "Claude Code"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "wwr-contentjet-inc-ai-agent-architect-builder",
-      "company": "ContentJet Inc.",
-      "position": "AI Agent Architect / Builder",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: Montreal, Canada URL: https://www.contentjet.com ABOUT CONTENTJET ContentJet is a Canadian UGC creative agency that connects brands with creators to produce high-performing user-generated content at scale. We serve global clients across e-commerce, healthcare, and marketing verticals....",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/contentjet-inc-ai-agent-architect-builder",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/contentjet-inc-ai-agent-architect-builder",
-      "postedAt": "2026-03-30T12:49:53+00:00",
-      "tags": [
-        "React",
-        "Python",
-        "Claude Code"
-      ],
-      "companyIcon": ""
-    },
-    {
       "id": "anth-5168829008",
       "company": "Anthropic",
       "position": "Software Engineer, Cloud Inference Safeguards",
@@ -851,29 +850,6 @@
       "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
-      "id": "wwr-eventmobi-senior-front-end-engineer-remote-1",
-      "company": "EventMobi",
-      "position": "Senior Front End Engineer - Remote",
-      "location": "Remote",
-      "remote": true,
-      "salary": "$50k",
-      "description": "Headquarters: 151 Yonge Street 11th Floor Toronto, Ontario M5C 2W7 URL: https://www.eventmobi.com/ *** EventMobi is an all-remote company and this is a fully remote position, open to all candidates with a focus in Pakistan, India, Brazil, Columbia, Argentina and Mexico. You will need to be able to...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/eventmobi-senior-front-end-engineer-remote-1",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/eventmobi-senior-front-end-engineer-remote-1",
-      "postedAt": "2026-03-27T17:07:25+00:00",
-      "tags": [
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "Go",
-        "AWS",
-        "Docker",
-        "React Native"
-      ],
-      "companyIcon": ""
-    },
-    {
       "id": "anth-5104689008",
       "company": "Anthropic",
       "position": "Product Designer, Claude Code",
@@ -886,74 +862,6 @@
       "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5104689008",
       "postedAt": "2026-03-26T16:40:33-04:00",
       "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "wwr-leadup-ai-full-stack-developer-junior",
-      "company": "LeadUp AI",
-      "position": "Full-Stack Developer (Junior)",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: United States URL: http://www.leadupgym.com The Role You build the majority of the user-facing application. You work from a detailed specification and follow patterns set by the senior developer. AI coding tools are a core part of your workflow. This is a fast-moving environment....",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/leadup-ai-full-stack-developer-junior",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/leadup-ai-full-stack-developer-junior",
-      "postedAt": "2026-03-25T02:14:15+00:00",
-      "tags": [
-        "React",
-        "Next.js",
-        "Python",
-        "PostgreSQL",
-        "Claude Code",
-        "Cursor",
-        "Copilot",
-        "Tailwind"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "anth-5160757008",
-      "company": "Anthropic",
-      "position": "Security Risk & Compliance, HIPAA",
-      "location": "San Francisco, CA | New York City, NY | Seattle, WA; Washington, DC",
-      "remote": false,
-      "salary": "",
-      "description": "About Anthropic Anthropic’s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5160757008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5160757008",
-      "postedAt": "2026-03-20T17:36:54-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "GCP",
-        "Azure",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "anth-5159669008",
-      "company": "Anthropic",
-      "position": "Prompt Engineer, Claude Code",
-      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
-      "remote": false,
-      "salary": "$320,000-405,000",
-      "description": "As a Prompt Engineer on the Claude Code team, you'll own Claude's behaviors specifically within Claude Code — ensuring users get a consistent, safe, and high-quality experience as we ship new models and evolve the product. This is a highly specialized role sitting at the intersection of model...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5159669008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5159669008",
-      "postedAt": "2026-03-20T05:23:26-04:00",
-      "tags": [
-        "TypeScript",
-        "Python",
         "Rust",
         "AWS",
         "Claude Code",
@@ -1089,7 +997,7 @@
     {
       "id": "anth-5146999008",
       "company": "Anthropic",
-      "position": "Head of International - Partner Solutions Architecture, Applied AI",
+      "position": "Head of International Applied AI Architecture, Partnerships",
       "location": "London, UK",
       "remote": false,
       "salary": "",
@@ -1133,7 +1041,7 @@
     {
       "id": "anth-5140405008",
       "company": "Anthropic",
-      "position": "Solutions Architect, Applied AI (Government Technology)",
+      "position": "Applied AI Architect, Government Technology",
       "location": "New York City, NY; Washington, DC",
       "remote": false,
       "salary": "",
@@ -1154,8 +1062,8 @@
     {
       "id": "anth-5140403008",
       "company": "Anthropic",
-      "position": "Solutions Architect, Applied AI (State and Local Government, West)",
-      "location": "San Francisco, CA | New York City, NY | Washington, DC",
+      "position": "Applied AI Architect, State and Local Government",
+      "location": "New York City, NY; Washington, DC",
       "remote": false,
       "salary": "",
       "description": "As an Applied AI team member at Anthropic, you will be a Pre-Sales architect focused on becoming a trusted technical advisor helping state and local government agencies understand the value of Claude and paint the vision on how they can successfully integrate and deploy Claude into their technology...",
@@ -1219,27 +1127,6 @@
         "Claude Code",
         "Cursor",
         "Copilot"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "wwr-level-senior-frontend-engineer",
-      "company": "Level",
-      "position": "Senior Frontend Engineer",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: Asheville, NC URL: https://level.io Level is a modern RMM platform built around real-time data, automation, and an uncompromising focus on UX. We're profitable, growing, and shipping fast with a small team. Our platform manages devices across thousands of organizations. We're hiring...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/level-senior-frontend-engineer",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/level-senior-frontend-engineer",
-      "postedAt": "2026-03-03T17:26:57+00:00",
-      "tags": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "GraphQL"
       ],
       "companyIcon": ""
     },
@@ -1436,7 +1323,7 @@
     {
       "id": "anth-5117652008",
       "company": "Anthropic",
-      "position": "Manager of Solutions Architecture, Applied AI (Industries)",
+      "position": "Manager of Applied AI Architecture, Industries",
       "location": "Munich, Germany",
       "remote": false,
       "salary": "",
@@ -1456,7 +1343,7 @@
     {
       "id": "anth-5115884008",
       "company": "Anthropic",
-      "position": "Manager of Solutions Architecture, Applied AI (Industries)",
+      "position": "Manager of Applied AI Architecture, Industries",
       "location": "London, UK",
       "remote": false,
       "salary": "",
@@ -1803,30 +1690,6 @@
       "companyIcon": ""
     },
     {
-      "id": "wwr-walter-senior-software-engineer",
-      "company": "WALTER",
-      "position": "Senior Software Engineer",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: Remote URL: http://gowalter.co Senior Software Engineers at Stamped are hands-on builders responsible for designing, developing, and delivering high-quality software that powers our products. This role combines technical depth with product intuition — engineers are expected to think...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/walter-senior-software-engineer",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/walter-senior-software-engineer",
-      "postedAt": "2026-01-29T21:06:16+00:00",
-      "tags": [
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "Python",
-        "Node.js",
-        "AWS",
-        "Copilot",
-        "Vue.js"
-      ],
-      "companyIcon": ""
-    },
-    {
       "id": "anth-5075093008",
       "company": "Anthropic",
       "position": "Strategic Account Executive, Digital Native Business & Cybersecurity",
@@ -1871,7 +1734,7 @@
     {
       "id": "anth-5079511008",
       "company": "Anthropic",
-      "position": "Solutions Architect, Applied AI (National Security)",
+      "position": "Applied AI Architect, National Security",
       "location": "Washington, DC",
       "remote": false,
       "salary": "",
@@ -1892,7 +1755,7 @@
     {
       "id": "anth-5079540008",
       "company": "Anthropic",
-      "position": "Solutions Architect, Applied AI (Federal Civilian)",
+      "position": "Applied AI Architect, Federal Civilian",
       "location": "New York City, NY; Washington, DC",
       "remote": false,
       "salary": "",
