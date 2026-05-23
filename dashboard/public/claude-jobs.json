@@ -1,13 +1,55 @@
 {
-  "lastUpdated": "2026-05-14T04:20:58.430493+00:00",
-  "totalJobs": 90,
+  "lastUpdated": "2026-05-23T04:19:14.574559+00:00",
+  "totalJobs": 81,
   "sources": [
     "Anthropic",
-    "HackerNews",
-    "RemoteOK",
-    "WeWorkRemotely"
+    "HackerNews"
   ],
   "jobs": [
+    {
+      "id": "anth-5228463008",
+      "company": "Anthropic",
+      "position": "Support Engineer",
+      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "remote": false,
+      "salary": "",
+      "description": "We are hiring Support Engineers to serve as the named, dedicated Product Support point of contact for Anthropic's most strategic enterprise customers. As a Support Engineer, you'll be providing high-touch, deeply contextual support to a defined book of accounts — embedded in your customers' shared...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5228463008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5228463008",
+      "postedAt": "2026-05-22T18:19:40-04:00",
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Rust",
+        "AWS",
+        "GCP",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
+    },
+    {
+      "id": "anth-5222289008",
+      "company": "Anthropic",
+      "position": "Manager of Solutions Architecture, Applied AI (Enterprise Tech)",
+      "location": "San Francisco, CA | New York City, NY",
+      "remote": false,
+      "salary": "",
+      "description": "As the manager of the Industries Solutions Architect team within Applied AI Enterprise Tech at Anthropic, you will drive the adoption of frontier AI in partnership with the rest of the go to market organization. Our Enterprise Tech customers include tech forward companies within verticals like...",
+      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5222289008",
+      "source": "Anthropic",
+      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5222289008",
+      "postedAt": "2026-05-18T17:11:30-04:00",
+      "tags": [
+        "Rust",
+        "Go",
+        "AWS",
+        "Claude Code",
+        "Anthropic"
+      ],
+      "companyIcon": "https://www.anthropic.com/favicon.ico"
+    },
     {
       "id": "anth-5218395008",
       "company": "Anthropic",
@@ -102,25 +144,6 @@
       "tags": [
         "JavaScript",
         "Python"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "rok-remote-mid-senior-ai-cinematic-video-editor-everai-1131485",
-      "company": "EverAI",
-      "position": "Mid Senior AI Cinematic Video Editor",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Our Vision & Products ð EverAI — Building the Future of AI Companionship One of the Top 15 Largest & Fastest-Growing AI Companies in the World 50 Million Users in 2 years — Help Us Reach 100M first, 500M next At EverAI , we’re shaping what it means to connect with AI. With 50 million users and...",
-      "applyUrl": "https://remoteOK.com/remote-jobs/remote-mid-senior-ai-cinematic-video-editor-everai-1131485",
-      "source": "RemoteOK",
-      "sourceUrl": "https://remoteok.com/remote-jobs/remote-mid-senior-ai-cinematic-video-editor-everai-1131485",
-      "postedAt": "2026-05-06T11:27:14+00:00",
-      "tags": [
-        "AWS",
-        "Claude Code",
-        "Cursor"
       ],
       "companyIcon": ""
     },
@@ -501,45 +524,6 @@
       "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
-      "id": "anth-5194007008",
-      "company": "Anthropic",
-      "position": "Applied AI Architect, Public Sector",
-      "location": "London, UK",
-      "remote": false,
-      "salary": "",
-      "description": "As an Applied AI team member at Anthropic, you will be a pre-sales architect focused on becoming a trusted technical advisor to the UK and Northern Europe public sector — with a primary focus on UK Central Government departments, executive agencies, and arm’s length bodies, and a reach extending...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5194007008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5194007008",
-      "postedAt": "2026-04-23T03:34:39-04:00",
-      "tags": [
-        "Python",
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "wwr-calibrate-group-ai-senior-technical-lead",
-      "company": "Calibrate Group AI",
-      "position": "Senior Technical Lead",
-      "location": "Remote",
-      "remote": true,
-      "salary": "",
-      "description": "Headquarters: Florida URL: http://Calibrategroup.ai About the Role: We're hiring our founding technical hire — a Senior Technical Lead who will own the entire technical vision and execution. This is a co-builder role, not a cog-in-machine role. This is an application-layer engineering role. You'll...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/calibrate-group-ai-senior-technical-lead",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/calibrate-group-ai-senior-technical-lead",
-      "postedAt": "2026-04-20T18:01:26+00:00",
-      "tags": [
-        "Kubernetes",
-        "Cursor"
-      ],
-      "companyIcon": ""
-    },
-    {
       "id": "anth-5191433008",
       "company": "Anthropic",
       "position": "Software Engineer, Safeguards Foundations (Internal Tooling)",
@@ -607,38 +591,6 @@
         "Anthropic"
       ],
       "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "wwr-housecall-pro-senior-product-operations-manager-i",
-      "company": "Housecall Pro",
-      "position": "Senior Product Operations Manager I",
-      "location": "Remote",
-      "remote": true,
-      "salary": "$120,000-$149,000",
-      "description": "Headquarters: United States Why Housecall Pro? Help us build solutions that build better lives. At Housecall Pro, we show up to work every day to make a difference for real people: the home service professionals that support America’s 100 million homes. We’re all about the Pro, and dedicate our...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/housecall-pro-senior-product-operations-manager-i",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/housecall-pro-senior-product-operations-manager-i",
-      "postedAt": "2026-04-16T20:31:12+00:00",
-      "tags": [
-        "Rust"
-      ],
-      "companyIcon": ""
-    },
-    {
-      "id": "wwr-monograph-content-marketer-product",
-      "company": "Monograph",
-      "position": "Content Marketer (Product)",
-      "location": "Remote",
-      "remote": true,
-      "salary": "$70,000 - $80,000",
-      "description": "Headquarters: US, Remote Look around you today, every store, home, hospital, school, was made possible by the coordination of architects and a team of professionals. They are charged with the responsibility of creating our shelters and yet, they are left with nothing more than Excel to manage their...",
-      "applyUrl": "https://weworkremotely.com/remote-jobs/monograph-content-marketer-product",
-      "source": "WeWorkRemotely",
-      "sourceUrl": "https://weworkremotely.com/remote-jobs/monograph-content-marketer-product",
-      "postedAt": "2026-04-16T20:31:11+00:00",
-      "tags": [],
-      "companyIcon": ""
     },
     {
       "id": "anth-5186669008",
@@ -1253,46 +1205,6 @@
       "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
-      "id": "anth-5153586008",
-      "company": "Anthropic",
-      "position": "Communications Lead, Claude Code",
-      "location": "San Francisco, CA",
-      "remote": false,
-      "salary": "",
-      "description": "Anthropic is looking for a Communications Lead to own comms for Claude Code. You'll sit on the Product Communications team, working day-to-day with the Claude Code product team, developer relations, and marketing. The media landscape for developer tools doesn't look like it did five years ago. We...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153586008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153586008",
-      "postedAt": "2026-03-19T12:09:53-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "anth-5153773008",
-      "company": "Anthropic",
-      "position": "Product Manager, Monetization",
-      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
-      "remote": false,
-      "salary": "",
-      "description": "As a Product Manager for Monetization, you’ll drive revenue growth across our product suite spanning Claude.ai , Claude Code, Claude Cowork, and Claude Platform. You’ll work closely with other growth teams that are focused on driving growth for specific audiences. You’ll also partner with a...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153773008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5153773008",
-      "postedAt": "2026-03-17T14:25:05-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
       "id": "hn-47360403",
       "company": "Breezy",
       "position": "Product Engineer",
@@ -1347,27 +1259,6 @@
       "source": "Anthropic",
       "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5146298008",
       "postedAt": "2026-03-10T13:14:01-04:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
-        "Rails",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "anth-5146363008",
-      "company": "Anthropic",
-      "position": "Engineering Manager, Product Monetization (Billing Platform)",
-      "location": "San Francisco, CA | New York City, NY",
-      "remote": false,
-      "salary": "",
-      "description": "Anthropic exists to ensure the world safely navigates the transition through transformative AI. That work is funded by commercial revenue — and that revenue runs through Billing Platform. The Product Monetization team builds the on-rails that let every product team at Anthropic — Claude.ai , the...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5146363008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5146363008",
-      "postedAt": "2026-03-10T13:12:42-04:00",
       "tags": [
         "Rust",
         "AWS",
@@ -1684,30 +1575,9 @@
       "companyIcon": "https://www.anthropic.com/favicon.ico"
     },
     {
-      "id": "anth-5123769008",
-      "company": "Anthropic",
-      "position": "Technical Program Manager, Security (Coordinated Vulnerability Disclosure)",
-      "location": "San Francisco, CA | New York City, NY | Seattle, WA",
-      "remote": false,
-      "salary": "",
-      "description": "As a Technical Program Manager for Security, Coordinated Vulnerability Disclosure (CVD), you will build and lead the programs that govern how Anthropic responsibly discloses software vulnerabilities discovered by our AI-powered tools, including Claude, Patchy, and Claude Code. These tools have...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5123769008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5123769008",
-      "postedAt": "2026-02-18T03:40:49-05:00",
-      "tags": [
-        "Rust",
-        "Go",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
       "id": "anth-5098025008",
       "company": "Anthropic",
-      "position": "Model Quality Software Engineer, Claude Code",
+      "position": "Model Performance Software Engineer, Claude Code",
       "location": "San Francisco, CA | New York City, NY",
       "remote": false,
       "salary": "",
@@ -1744,26 +1614,6 @@
         "Claude Code",
         "Copilot",
         "Rails",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "anth-5064817008",
-      "company": "Anthropic",
-      "position": "Head of Solutions Architects, Applied AI (Korea)",
-      "location": "Seoul, South Korea",
-      "remote": false,
-      "salary": "",
-      "description": "As the founding leader of Applied AI Solutions Architecture in Korea, you will drive the adoption of frontier AI by enabling the deployment of Anthropic's products (Claude for Enterprise, Claude Code, and API) across Korean enterprises and digital-first organizations. You'll leverage your technical...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5064817008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/5064817008",
-      "postedAt": "2026-01-23T07:43:37-05:00",
-      "tags": [
-        "Rust",
-        "AWS",
-        "Claude Code",
         "Anthropic"
       ],
       "companyIcon": "https://www.anthropic.com/favicon.ico"
@@ -1846,27 +1696,6 @@
       "postedAt": "2025-11-12T22:30:23-05:00",
       "tags": [
         "Rust",
-        "AWS",
-        "Claude Code",
-        "Anthropic"
-      ],
-      "companyIcon": "https://www.anthropic.com/favicon.ico"
-    },
-    {
-      "id": "anth-4964610008",
-      "company": "Anthropic",
-      "position": "Manager of Solutions Architecture, Applied AI (Industries)",
-      "location": "San Francisco, CA | New York City, NY",
-      "remote": false,
-      "salary": "",
-      "description": "As the manager of the Industries Solutions Architect team within Applied AI at Anthropic, you will drive the adoption of frontier AI in partnership with the rest of the go to market organization. Our Industries customers include Fortune 500 companies within verticals like financial services,...",
-      "applyUrl": "https://job-boards.greenhouse.io/anthropic/jobs/4964610008",
-      "source": "Anthropic",
-      "sourceUrl": "https://job-boards.greenhouse.io/anthropic/jobs/4964610008",
-      "postedAt": "2025-11-04T08:19:19-05:00",
-      "tags": [
-        "Rust",
-        "Go",
         "AWS",
         "Claude Code",
         "Anthropic"
