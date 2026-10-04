@@ -13,6 +13,23 @@ jobs:
   update-json:
     runs-on: ubuntu-latest
 
+    # Every file the generators below write. Both the change check and the
+    # commit use this one list so they can't drift apart: anything missing here
+    # is regenerated on the runner and then thrown away, which is what used to
+    # leave the dashboard artifacts stale on main.
+    env:
+      DATA_PATHS: >-
+        docs/components.json
+        docs/trending-data.json
+        docs/claude-jobs.json
+        dashboard/public/components.json
+        dashboard/public/counts.json
+        dashboard/public/search-index.json
+        dashboard/public/trending-data.json
+        dashboard/public/claude-jobs.json
+        dashboard/public/components
+        dashboard/public/component-content
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -35,7 +52,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install requests python-dotenv
+          pip install requests python-dotenv pyyaml
 
       - name: Install Node.js dependencies
         run: |
@@ -43,9 +60,15 @@ jobs:
           npm ci --ignore-scripts
 
       - name: Create .env file with secrets
+        # Secrets go through env: so the shell reads them as data. Interpolating
+        # ${{ secrets.X }} straight into the script would let a value containing
+        # a quote or newline break out of the echo.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
         run: |
-          echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> .env
-          echo "SUPABASE_API_KEY=${{ secrets.SUPABASE_API_KEY }}" >> .env
+          printf 'SUPABASE_URL=%s\n' "$SUPABASE_URL" >> .env
+          printf 'SUPABASE_API_KEY=%s\n' "$SUPABASE_API_KEY" >> .env
 
       - name: Generate components.json
         run: python scripts/generate_components_json.py
@@ -65,18 +88,24 @@ jobs:
       - name: Copy data to dashboard
         run: |
           cp docs/claude-jobs.json dashboard/public/claude-jobs.json
+          cp docs/trending-data.json dashboard/public/trending-data.json
 
-      - name: Check for changes
+      - name: Stage generated data and check for changes
         id: check_changes
         run: |
-          git diff --quiet docs/components.json docs/trending-data.json docs/claude-jobs.json dashboard/public/claude-jobs.json || echo "changed=true" >> $GITHUB_OUTPUT
+          git add -A -- $DATA_PATHS
+          if git diff --cached --quiet -- $DATA_PATHS; then
+            echo "No changes in the generated data."
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+            git diff --cached --stat -- $DATA_PATHS
+          fi
 
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add docs/components.json docs/trending-data.json docs/claude-jobs.json dashboard/public/claude-jobs.json
           git commit -m "chore: Update components and trending data
 
           🤖 Generated with [GitHub Actions](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
